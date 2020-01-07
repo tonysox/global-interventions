@@ -7,8 +7,8 @@ services:
         restart: always
         env_file: .env
         volumes: 
-            # - ./data/psql:/var/lib/postgresql/data
-            # - ./data/backup:/opt
+            - ./data/psql:/var/lib/postgresql/data
+            - ./data/backup:/opt
             - /etc/localtime:/etc/localtime:ro   
             - /etc/timezone:/etc/timezone:ro  
         networks: 
@@ -22,7 +22,7 @@ services:
         env_file: .env
         volumes:  
             - ./conf/dhis:/opt/dhis2 
-            # - ./conf/tomcat/webapps:/usr/local/tomcat/webapps
+            - ./conf/tomcat/webapps:/usr/local/tomcat/webapps
             - ./conf/tomcat/conf:/usr/local/tomcat/conf
             - /etc/localtime:/etc/localtime:ro   
             - /etc/timezone:/etc/timezone:ro  
