@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--<script src="//dhis2-cdn.org/v230/plugin/eventreport.js"></script>-->
+    <script src="eventreport.js"></script>
+</head>
+
+<body>
+    <div id="eventReport1"></div>
+
+    <script>
+
+        eventReportPlugin.url = "http://global-interventions.eastus.cloudapp.azure.com";
+        eventReportPlugin.username = "admin";
+        eventReportPlugin.password = "district";
+
+        eventReportPlugin.load([{
+            "id": "q6E7deIahWa",
+            "url": "http://global-interventions.eastus.cloudapp.azure.com",
+            "el": "eventReport1"
+        }]);
+
+    </script>
+
+</body>
+
+</html>
